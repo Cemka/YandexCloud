@@ -1,0 +1,7 @@
+/shelf/
+/workspace.xml
+.gradle
+*.iml
+*.class
+*.log
+build/

@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Dependencies for use s3 with Yandex Cloud Storage
+    implementation platform('com.amazonaws:aws-java-sdk-bom:1.12.429')
+    implementation 'com.amazonaws:aws-java-sdk-s3'
+    implementation 'javax.xml.bind:jaxb-api:2.4.0-b180830.0359'
+
+    //Unit tests
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
